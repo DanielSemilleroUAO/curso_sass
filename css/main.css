@@ -1,0 +1,84 @@
+a {
+  margin: 0px;
+  padding: 0px;
+}
+a:hover {
+  color: #ff6600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #060a01;
+}
+
+p {
+  color: #494949;
+}
+
+nav {
+  width: 100%;
+  background-color: #ffcccc;
+  padding: 10px 0px;
+  position: fixed;
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+}
+nav .logo img {
+  width: 100%;
+}
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+nav ul li {
+  display: inline;
+  padding: 0px 10px;
+}
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  color: transparent(#494949, 0.5);
+}
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  height: 1px;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 0%;
+  background-color: red;
+  height: 1px;
+}
+nav ul li a:hover {
+  background-color: purple;
+  text-decoration: none;
+}
+nav ul li a:hover::before {
+  width: 0%;
+  background-color: #060a01;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: #060a01;
+}
+
+.tSlow, a, nav, nav .logo img, nav ul, nav ul li a, nav ul li a::before, nav ul li a::after {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.pad_100 {
+  padding: 100px 0px;
+}
+
+.center {
+  text-align: center;
+  margin: 0px auto;
+}

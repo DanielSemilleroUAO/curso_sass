@@ -1,0 +1,82 @@
+// Variables de los colores
+$base: #060a01
+$sec: #494949
+$outline: #ff6600
+$text: transparent($sec, .5)
+// Estilos generales
+
+a
+    margin: 0px
+    padding: 0px
+    @extend .tSlow
+    &:hover
+        color: $outline
+
+h1, h2, h3, h4, h5, h6
+    color: $base
+p
+    color: $sec
+
+nav
+    width: 100%
+    background-color: lighten(red, 40)
+    padding: 10px 0px
+    position: fixed
+    border-bottom: 1px solid transparent
+    z-index: 100
+    @extend .tSlow
+    .logo
+        img
+            width: 100%
+            @extend .tSlow
+
+    ul
+        margin: 0px
+        padding: 0px
+        text-align: right
+        @extend .tSlow
+        li
+            display: inline
+            padding: 0px 10px
+            a
+                position: relative
+                text-decoration: none
+                font-size: 16px
+                color: $text
+                @extend .tSlow
+                &::before
+                    content: ''
+                    position: absolute
+                    // top: 20px
+                    width: 100%
+                    background-color: transparent
+                    height: 1px
+                    @extend .tSlow
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 100%
+                    left: 0px
+                    width: 0%
+                    background-color: red
+                    height: 1px
+                    @extend .tSlow
+                &:hover
+                    background-color: purple
+                    text-decoration: none
+                    &::before
+                        width: 0%
+                        background-color: $base
+                    &::after
+                        width: 100%
+                        background-color: $base
+
+.tSlow
+    transition: all .5s ease-in-out
+
+.pad_100
+    padding: 100px 0px
+
+.center
+    text-align: center
+    margin: 0px auto
